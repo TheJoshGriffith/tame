@@ -1,0 +1,17 @@
+C:\Users\Peecee\AppData\Local\Temporary Projects\Tame\bin\Debug\Tame.exe
+C:\Users\Peecee\AppData\Local\Temporary Projects\Tame\bin\Debug\Tame.pdb
+C:\Users\Peecee\AppData\Local\Temporary Projects\Tame\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Peecee\AppData\Local\Temporary Projects\Tame\obj\x86\Debug\Tame.Properties.Resources.resources
+C:\Users\Peecee\AppData\Local\Temporary Projects\Tame\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Peecee\AppData\Local\Temporary Projects\Tame\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Peecee\AppData\Local\Temporary Projects\Tame\obj\x86\Debug\Tame.exe
+C:\Users\Peecee\AppData\Local\Temporary Projects\Tame\obj\x86\Debug\Tame.pdb
+C:\Users\Peecee\Documents\Tame\Server\Server\bin\Debug\Server.exe
+C:\Users\Peecee\Documents\Tame\Server\Server\bin\Debug\Server.pdb
+C:\Users\Peecee\Documents\Tame\Server\Server\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Peecee\Documents\Tame\Server\Server\obj\x86\Debug\Tame.Properties.Resources.resources
+C:\Users\Peecee\Documents\Tame\Server\Server\obj\x86\Debug\Tame.Server.resources
+C:\Users\Peecee\Documents\Tame\Server\Server\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Peecee\Documents\Tame\Server\Server\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Peecee\Documents\Tame\Server\Server\obj\x86\Debug\Server.exe
+C:\Users\Peecee\Documents\Tame\Server\Server\obj\x86\Debug\Server.pdb

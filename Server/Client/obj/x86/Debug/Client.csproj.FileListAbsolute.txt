@@ -1,0 +1,9 @@
+C:\Users\Peecee\Documents\Tame\Server\Client\bin\Debug\Client.exe
+C:\Users\Peecee\Documents\Tame\Server\Client\bin\Debug\Client.pdb
+C:\Users\Peecee\Documents\Tame\Server\Client\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Peecee\Documents\Tame\Server\Client\obj\x86\Debug\Client.Properties.Resources.resources
+C:\Users\Peecee\Documents\Tame\Server\Client\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Peecee\Documents\Tame\Server\Client\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Peecee\Documents\Tame\Server\Client\obj\x86\Debug\Client.exe
+C:\Users\Peecee\Documents\Tame\Server\Client\obj\x86\Debug\Client.pdb
+C:\Users\Peecee\Documents\Tame\Server\Client\obj\x86\Debug\Client.Client.resources
