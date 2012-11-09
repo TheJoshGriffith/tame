@@ -47,18 +47,25 @@ namespace Tame
             //}
         }
 
-        private string listener()
+        private void listener()
         {
-            // Listener function, this will listen for incoming messages and write them to our console
-            byte[] buffer = new byte[32];
-            int len = clientSock.Receive(buffer);
-            if (len >= 1)
+            if (clientSock.Connected)
             {
-                return (encoding.GetString(buffer, 0, len));
+                // Listener function, this will listen for incoming messages and write them to our console
+                byte[] buffer = new byte[32];
+                int len = clientSock.Receive(buffer);
+                if (len >= 1)
+                {
+                    // Invoke a new action to add items to listbox, must do because we are editing an object of another thread.
+                    BeginInvoke(new Action(delegate()
+                    {
+                        listBox1.Items.Add(encoding.GetString(buffer, 0, len));
+                    }));
+                }
             }
             else
             {
-                return ("");
+                connected = false;
             }
         }
         
@@ -86,11 +93,8 @@ namespace Tame
             }
             else
             {
-                response = listener();
-                if (response != "")
-                {
-                    listBox1.Items.Add(response);
-                }
+                Thread listen = new Thread(listener);
+                listen.Start();
             }
         }
     }

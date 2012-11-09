@@ -15,7 +15,7 @@ namespace Client
     {
         ASCIIEncoding encoding = new ASCIIEncoding();
         IPEndPoint ipEnd = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 2000);
-        Socket sock = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.IP);
+        Socket sock;
 
         public Client()
         {
@@ -30,6 +30,7 @@ namespace Client
 
         private void conBut_Click(object sender, EventArgs e)
         {
+            sock = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.IP);
             sock.Connect(ipEnd);
             byte[] buffer = new byte[32];
             sock.Receive(buffer);
@@ -46,7 +47,9 @@ namespace Client
 
         private void button3_Click(object sender, EventArgs e)
         {
-            sock.Disconnect(true);
+            sock.Close();
+            sock.Dispose();
+            sock = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.IP);
             conBut.Enabled = true;
             button3.Enabled = false;
         }
