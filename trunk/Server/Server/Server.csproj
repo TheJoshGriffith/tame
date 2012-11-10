@@ -66,6 +66,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clients.cs" />
     <Compile Include="messageConversion.cs" />
     <Compile Include="Server.cs">
       <SubType>Form</SubType>
