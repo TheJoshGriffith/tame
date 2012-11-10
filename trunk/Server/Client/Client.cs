@@ -47,11 +47,15 @@ namespace Client
 
         private void button3_Click(object sender, EventArgs e)
         {
-            sock.Close();
-            sock.Dispose();
-            sock = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.IP);
+            sock.Shutdown(SocketShutdown.Both);
+            sock.Disconnect(true);
             conBut.Enabled = true;
             button3.Enabled = false;
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            textBox1.Text = Convert.ToString(comboBox1.SelectedItem);
         }
     }
 }
