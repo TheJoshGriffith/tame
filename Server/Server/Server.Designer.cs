@@ -35,6 +35,10 @@
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.conButton = new System.Windows.Forms.Button();
             this.timerListen = new System.Windows.Forms.Timer(this.components);
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Connection = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Level = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // button2
@@ -75,11 +79,33 @@
             // 
             this.timerListen.Tick += new System.EventHandler(this.timerListen_Tick);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Connection,
+            this.Level});
+            this.dataGridView1.Location = new System.Drawing.Point(258, 12);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(277, 238);
+            this.dataGridView1.TabIndex = 6;
+            // 
+            // Connection
+            // 
+            this.Connection.HeaderText = "Connection";
+            this.Connection.Name = "Connection";
+            // 
+            // Level
+            // 
+            this.Level.HeaderText = "Level";
+            this.Level.Name = "Level";
+            // 
             // Server
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(266, 262);
+            this.ClientSize = new System.Drawing.Size(547, 262);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.conButton);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.textBox1);
@@ -91,6 +117,7 @@
             this.Name = "Server";
             this.Text = "Tame Server";
             this.Load += new System.EventHandler(this.Server_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -104,6 +131,9 @@
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button conButton;
         private System.Windows.Forms.Timer timerListen;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Connection;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Level;
     }
 }
 
