@@ -20,10 +20,11 @@ namespace Tame
         Socket sock = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.IP);
         Socket clientSock;
         bool connected = false;
-        string response;
+        bool resfound = false;
 
         public Server()
         {
+            Thread.CurrentThread.Name = "main";
             InitializeComponent();
         }
 
@@ -37,14 +38,12 @@ namespace Tame
 
         private void acceptConnection()
         {
-            //while (!connected)
-            //{
-            // Accept the connection from a client, give that client a welcome message, and assign it to clientSock
             clientSock = sock.Accept();
-            byte[] mabytes = encoding.GetBytes("Welcome to Josh's humble server.");
+            byte[] mabytes = encoding.GetBytes("Welcome to Josh's epic server.");
             clientSock.Send(mabytes);
             connected = true;
-            //}
+            dataGridView1.Rows.Add(Convert.ToString(clientSock.Handle), 1);
+            
         }
 
         private void listener()
@@ -56,11 +55,24 @@ namespace Tame
                 int len = clientSock.Receive(buffer);
                 if (len >= 1)
                 {
-                    // Invoke a new action to add items to listbox, must do because we are editing an object of another thread.
-                    BeginInvoke(new Action(delegate()
+                    resfound = messageConversion.convertMessage(encoding.GetString(buffer, 0, len));
+
+                    if (!resfound)
                     {
-                        listBox1.Items.Add(encoding.GetString(buffer, 0, len));
-                    }));
+                        // Invoke a new action to add items to listbox, must do because we are editing an object of another thread.
+                        BeginInvoke(new Action(delegate()
+                        {
+                            listBox1.Items.Add(encoding.GetString(buffer, 0, len));
+                        }));
+                    }
+                    else
+                    {
+                        BeginInvoke(new Action(delegate()
+                            {
+                                listBox1.Items.Add("A solution was found to the suggested argument");
+                            }));
+
+                    }
                 }
             }
             else
@@ -94,6 +106,7 @@ namespace Tame
             else
             {
                 Thread listen = new Thread(listener);
+                listen.Name = "Listener";
                 listen.Start();
             }
         }

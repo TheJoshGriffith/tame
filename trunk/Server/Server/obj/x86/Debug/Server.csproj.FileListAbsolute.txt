@@ -15,3 +15,4 @@ C:\Users\Peecee\Documents\Tame\Server\Server\obj\x86\Debug\GenerateResource.read
 C:\Users\Peecee\Documents\Tame\Server\Server\obj\x86\Debug\GenerateResource.write.1.tlog
 C:\Users\Peecee\Documents\Tame\Server\Server\obj\x86\Debug\Server.exe
 C:\Users\Peecee\Documents\Tame\Server\Server\obj\x86\Debug\Server.pdb
+C:\Users\Peecee\Documents\Tame\Server\Server\bin\Debug\Server.exe.config
