@@ -7,5 +7,16 @@ namespace Tame
 {
     class clients
     {
+        public static struct client
+        {
+            public string name;
+            public int pid;
+            public int acc;
+            public int level;
+            public int posx;
+            public int posy;
+            public int posz;
+
+        }
     }
 }
