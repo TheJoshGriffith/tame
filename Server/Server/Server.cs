@@ -43,6 +43,7 @@ namespace Tame
             clientSock.Send(mabytes);
             connected = true;
             dataGridView1.Rows.Add(Convert.ToString(clientSock.Handle), 1);
+            comboBox1.Items.Add(Convert.ToString(clientSock.Handle));
             
         }
 
@@ -62,7 +63,7 @@ namespace Tame
                         // Invoke a new action to add items to listbox, must do because we are editing an object of another thread.
                         BeginInvoke(new Action(delegate()
                         {
-                            listBox1.Items.Add(encoding.GetString(buffer, 0, len));
+                            listBox1.Items.Add("Incoming Message from " + Convert.ToString(clientSock.Handle) + ": " + encoding.GetString(buffer, 0, len));
                         }));
                     }
                     else

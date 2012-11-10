@@ -7,7 +7,7 @@ namespace Tame
 {
     class clients
     {
-        public static struct client
+        public struct client
         {
             public string name;
             public int pid;
