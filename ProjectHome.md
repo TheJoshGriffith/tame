@@ -1,0 +1,1 @@
+This program is in a very early stage of development, but uses a combination of MS SQL, Sockets, and other features to create a new style of gameplay.
